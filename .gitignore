@@ -12,3 +12,4 @@ classes
 gradle/
 out/production/resources/
 /ohana-web/node_modules/
+/ohana-web/dist/
