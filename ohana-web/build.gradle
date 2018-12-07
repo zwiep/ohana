@@ -1,0 +1,32 @@
+plugins {
+  id "com.liferay.node" version "4.4.0"
+}
+
+node {
+  version = '10.6.0'
+  download = true
+  nodeDir = file("${project.buildDir}/nodejs")
+}
+
+npmInstall {
+  workingDir = file('./src')
+  outputs.upToDateWhen {false} // trick gradle into always running npm install to add new dependencies
+}
+
+assemble.finalizedBy 'ngBuildProd'
+
+test.dependsOn 'ngTest'
+
+task ngTest(type: ExecuteNpmTask) {
+  workingDir = file('./src')
+  args = ['run', 'ngSingleTest']
+}
+
+task ngBuildProd(type: NpmTask) {
+  workingDir = file('./src')
+  args = ['run', 'buildProd']
+}
+
+war {
+  from 'src/dist'
+}
