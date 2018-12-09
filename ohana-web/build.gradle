@@ -17,16 +17,16 @@ assemble.finalizedBy 'ngBuildProd'
 
 test.dependsOn 'ngTest'
 
-task ngTest(type: ExecuteNpmTask) {
-  workingDir = file('./src')
-  args = ['run', 'ngSingleTest']
-}
-
-task ngBuildProd(type: NpmTask) {
-  workingDir = file('./src')
-  args = ['run', 'buildProd']
-}
-
-war {
-  from 'src/dist'
-}
+//task ngTest(type: ExecuteNpmTask) {
+//  workingDir = file('./src')
+//  args = ['run', 'ngSingleTest']
+//}
+//
+//task ngBuildProd(type: NpmTask) {
+//  workingDir = file('./src')
+//  args = ['run', 'buildProd']
+//}
+//
+//war {
+//  from 'src/dist'
+//}
