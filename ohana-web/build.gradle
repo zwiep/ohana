@@ -1,32 +1,22 @@
 plugins {
-  id "com.liferay.node" version "4.4.0"
-}
-
-node {
-  version = '10.6.0'
-  download = true
-  nodeDir = file("${project.buildDir}/nodejs")
-}
-
-npmInstall {
-  workingDir = file('./src')
-  outputs.upToDateWhen {false} // trick gradle into always running npm install to add new dependencies
+  id "com.moowork.node" version "1.2.0"
+  id "war"
 }
 
 assemble.finalizedBy 'ngBuildProd'
 
-test.dependsOn 'ngTest'
-
+//test.dependsOn 'ngTest'
+//
 //task ngTest(type: ExecuteNpmTask) {
 //  workingDir = file('./src')
 //  args = ['run', 'ngSingleTest']
 //}
-//
-//task ngBuildProd(type: NpmTask) {
-//  workingDir = file('./src')
-//  args = ['run', 'buildProd']
-//}
-//
-//war {
-//  from 'src/dist'
-//}
+
+task ngBuildProd(type: NpmTask) {
+  workingDir = file('./src')
+  args = ['run', 'buildProd']
+}
+
+war {
+  from 'dist'
+}
