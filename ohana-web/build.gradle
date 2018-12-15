@@ -2,15 +2,14 @@ plugins {
   id "com.moowork.node" version "1.2.0"
   id "war"
 }
-
 assemble.finalizedBy 'ngBuildProd'
 
-//test.dependsOn 'ngTest'
-//
-//task ngTest(type: ExecuteNpmTask) {
-//  workingDir = file('./src')
-//  args = ['run', 'ngSingleTest']
-//}
+test.dependsOn 'ngTest'
+
+task ngTest(type: NpmTask) {
+  workingDir = file('./src')
+  args = ['run', 'test-headless']
+}
 
 task ngBuildProd(type: NpmTask) {
   workingDir = file('./src')
