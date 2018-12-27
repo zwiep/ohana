@@ -6,6 +6,8 @@ import {AppRoutingModule} from './app-routing.module';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import { HeaderComponent } from './header/header.component';
 import { OverviewComponent } from './overview/overview.component';
+import {MatButtonModule, MatFormFieldModule, MatInputModule} from "@angular/material";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
@@ -16,6 +18,10 @@ import { OverviewComponent } from './overview/overview.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
     AppRoutingModule
   ],
   providers: [],
