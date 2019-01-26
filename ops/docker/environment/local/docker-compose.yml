@@ -1,0 +1,11 @@
+version: '3.7'
+services:
+    ohana-mysql:
+      image: ohana-mysql
+      build: ../../mysql
+      container_name: ohana-mysql
+      environment:
+          MYSQL_ROOT_PASSWORD: test
+          MYSQL_DATABASE: ohana
+      ports:
+        - "3360:3360"

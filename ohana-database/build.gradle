@@ -1,0 +1,4 @@
+plugins {
+    id 'com.bmuschko.docker-remote-api' version '4.3.0'
+    id "org.flywaydb.flyway" version "5.2.4"
+}
