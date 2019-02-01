@@ -2,6 +2,8 @@ version: '3.7'
 services:
     ohana-mysql:
       image: ohana-mysql
+      command: mysqld --default-authentication-plugin=mysql_native_password
+      restart: always
       build: ../../mysql
       container_name: ohana-mysql
       environment:
