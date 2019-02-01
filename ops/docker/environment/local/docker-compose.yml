@@ -8,4 +8,4 @@ services:
           MYSQL_ROOT_PASSWORD: test
           MYSQL_DATABASE: ohana
       ports:
-        - "3360:3360"
+        - "3306:3306"
