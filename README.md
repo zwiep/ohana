@@ -1,13 +1,21 @@
 # ohana
 Formerly FIT
 
+- Gradle
+- Avast docker-compose plugin
+- MySQL
+- Java
+- Angular
 
-#### Gradle
+
+Gradle
+-
 > ./gradlew build 
 
 to build project
 
-#### Docker
+Docker
+-
 Use 
 > ./gradlew ohanaMySqlComposeUp
 
