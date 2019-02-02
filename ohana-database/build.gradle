@@ -1,4 +1,12 @@
 plugins {
-    id 'com.bmuschko.docker-remote-api' version '4.3.0'
+    id 'com.avast.gradle.docker-compose' version '0.8.13'
     id "org.flywaydb.flyway" version "5.2.4"
+}
+
+dockerCompose {
+    dockerComposeWorkingDirectory = '../ops/docker/environment/local'
+
+    ohanaMysql {
+        useComposeFiles = ['docker-compose.yml']
+    }
 }
