@@ -4,9 +4,9 @@ plugins {
 }
 
 dockerCompose {
-    dockerComposeWorkingDirectory = '../ops/docker/environment/local'
+    dockerComposeWorkingDirectory = '../ops/docker'
 
     ohanaMysql {
-        useComposeFiles = ['docker-compose.yml']
+        useComposeFiles = ['environment/local/docker-compose.yml']
     }
 }
