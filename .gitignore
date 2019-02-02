@@ -9,7 +9,6 @@ classes
 */out/
 */*/out/
 .gitignore
-gradle/
 out/production/resources/
 /ohana-web/node_modules/
 /ohana-web/dist/
