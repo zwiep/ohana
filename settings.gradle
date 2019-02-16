@@ -1,4 +1,4 @@
 include 'ohana-api'
-include 'ohana-database'
 include 'ohana-web'
+include 'ohana-database'
 include 'ops'
