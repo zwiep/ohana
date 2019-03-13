@@ -1,14 +1,48 @@
 <app-overview-search></app-overview-search>
 
+<mat-table [dataSource]="dataSource"
+           multiTemplateDataRows
+           class="mat-elevation-z8">
+  <mat-header-row *matHeaderRowDef="personsOverviewHeaders"></mat-header-row>
+  <mat-row *matRowDef="let person; columns: personsOverviewHeaders;"
+           class="person-row"
+           [class.person-expanded-row]="expandedPerson === person"
+           (click)="expandedPerson = expandedPerson === person ? null : person">
+  </mat-row>
+
+  <mat-row *matRowDef="let person; columns: ['expandedDetail']"
+           class="person-detail-row">
+  </mat-row>
+
+  <ng-container matColumnDef="{{header}}" *ngFor="let header of personsOverviewHeaders">
+    <mat-header-cell *matHeaderCellDef> {{header}} </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element[header]}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="expandedDetail">
+    <mat-cell *matCellDef="let person" [attr.colspan]="personsOverviewHeaders.length">
+      <div class="person-detail"
+           [@detailExpand]="person == expandedPerson ? 'expanded' : 'collapsed'">
+        test
+      </div>
+    </mat-cell>
+  </ng-container>
+
+</mat-table>
+
 <table mat-table
        [dataSource]="dataSource" multiTemplateDataRows
        class="mat-elevation-z8">
+
   <tr mat-header-row *matHeaderRowDef="personsOverviewHeaders"></tr>
+
   <tr mat-row *matRowDef="let person; columns: personsOverviewHeaders;"
       class="person-row"
       [class.person-expanded-row]="expandedPerson === person"
       (click)="expandedPerson = expandedPerson === person ? null : person">
   </tr>
+
+
   <tr mat-row *matRowDef="let person; columns: ['expandedDetail']"
       class="person-detail-row"></tr>
 
@@ -42,6 +76,5 @@
       </div>
     </td>
   </ng-container>
+
 </table>
-
-
