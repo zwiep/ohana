@@ -10,6 +10,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {OverviewSearchComponent} from './overview/overview-search/overview-search.component';
 import { OverviewResultComponent } from './overview/overview-result/overview-result.component';
 import { OverviewResultRowComponent } from './overview/overview-result-row/overview-result-row.component';
+import { OverviewResultRowDetailComponent } from './overview/overview-result-row-detail/overview-result-row-detail.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { OverviewResultRowComponent } from './overview/overview-result-row/overv
     OverviewComponent,
     OverviewSearchComponent,
     OverviewResultComponent,
-    OverviewResultRowComponent
+    OverviewResultRowComponent,
+    OverviewResultRowDetailComponent
   ],
   imports: [
     BrowserModule,

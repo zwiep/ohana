@@ -2,7 +2,7 @@ export interface Person {
   id: string;
   lastName: string;
   firstName: string;
-  middleName: string;
+  middleNames: string[];
   streetName: string;
   houseNumber: string;
   postalCode: string;

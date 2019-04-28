@@ -10,9 +10,18 @@ export class OverviewResultRowComponent implements OnInit {
 
   @Input('person') person: Person;
 
+  showDetail: boolean = false;
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  resultRowClicked() {
+    this.showDetail = !this.showDetail;
+  }
+
+  detailRowClicked() {
+    this.showDetail = !this.showDetail;
+  }
 }

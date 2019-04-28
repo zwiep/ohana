@@ -5,7 +5,7 @@ export const PERSON_DATA: Person[] = [
     id: '{SOME-UUID-ID-01-01-01}',
     lastName: 'Doe',
     firstName: 'John',
-    middleName: 'Sod',
+    middleNames: ['Sod', 'off'],
     streetName: 'Somestreet',
     houseNumber: '34T',
     postalCode: '2162',
@@ -18,10 +18,26 @@ export const PERSON_DATA: Person[] = [
     birthPlace: 'Here'
   },
   {
+    id: '{SOME-UUID-ID-03-03-03}',
+    lastName: 'Null',
+    firstName: 'Guy',
+    middleNames: null,
+    streetName: null,
+    houseNumber: null,
+    postalCode: null,
+    city: null,
+    country: null,
+    email: null,
+    phoneNumber: null,
+    mobilePhoneNumber: null,
+    birthDate: null,
+    birthPlace: null
+  },
+  {
     id: '{SOME-UUID-ID-02-02-02}',
     lastName: 'Doyle',
     firstName: 'Jane',
-    middleName: 'Susan',
+    middleNames: ['Susan'],
     streetName: 'OtherStreet',
     houseNumber: '98',
     postalCode: '8998',
@@ -37,7 +53,7 @@ export const PERSON_DATA: Person[] = [
     id: '{SOME-UUID-ID-03-03-03}',
     lastName: 'God',
     firstName: 'Dammit',
-    middleName: 'Karen',
+    middleNames: ['Karen'],
     streetName: 'That Street',
     houseNumber: '848',
     postalCode: 'ABC35325',
@@ -48,5 +64,21 @@ export const PERSON_DATA: Person[] = [
     mobilePhoneNumber: '+75 51x 46 98 xx',
     birthDate: new Date(1985,4,30),
     birthPlace: 'Not There'
+  },
+  {
+    id: '{SOME-UUID-ID-03-03-03}',
+    lastName: 'Last',
+    firstName: 'First',
+    middleNames: null,
+    streetName: 'Streetname',
+    houseNumber: '666',
+    postalCode: 'PC1234',
+    city: 'City',
+    country: 'Country',
+    email: 'email.me@email.me',
+    phoneNumber: 'phone number',
+    mobilePhoneNumber: 'mobile phone number',
+    birthDate: new Date(1901,1,1),
+    birthPlace: 'Birth Place'
   }
 ];
