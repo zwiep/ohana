@@ -7,7 +7,7 @@ export const PERSON_DATA: Person[] = [
     firstName: 'John',
     middleName: 'Sod',
     streetName: 'Somestreet',
-    houseNumber: '34tT',
+    houseNumber: '34T',
     postalCode: '2162',
     city: 'Karhu',
     country: 'Safrica',
