@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Person} from "../../model/person";
 
 @Component({
@@ -9,15 +9,9 @@ import {Person} from "../../model/person";
 export class OverviewResultRowDetailComponent implements OnInit {
 
   @Input('person') person: Person;
-  @Output() detailRowClickEvent = new EventEmitter();
 
   constructor() { }
 
   ngOnInit() {
   }
-
-  detailRowClicked() {
-    this.detailRowClickEvent.emit();
-  }
-
 }

@@ -1,4 +1,4 @@
-<div class="row"
+<div class="row table-row"
      (click)="resultRowClicked()">
   <div class="col-md-3">{{person.lastName}}</div>
   <div class="col-md-3">{{person.firstName}}</div>
@@ -7,8 +7,11 @@
 </div>
 <div *ngIf="showDetail">
   <app-overview-result-row-detail
-    [person]="person"
-    (detailRowClickEvent)="detailRowClicked()">
+    [person]="person">
   </app-overview-result-row-detail>
+  <hr>
+</div>
+<div *ngIf="!showDetail">
+  <hr>
 </div>
 

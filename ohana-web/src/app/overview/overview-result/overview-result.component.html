@@ -4,7 +4,8 @@
   <div class="col-md-4">Street + number</div>
   <div class="col-md-2">Birth date</div>
 </div>
-<div *ngFor="let person of persons" class="table-row">
+<hr>
+<div *ngFor="let person of persons">
   <app-overview-result-row
     [person]="person">
   </app-overview-result-row>

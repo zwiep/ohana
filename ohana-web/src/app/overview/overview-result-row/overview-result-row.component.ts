@@ -21,7 +21,7 @@ export class OverviewResultRowComponent implements OnInit {
     this.showDetail = !this.showDetail;
   }
 
-  detailRowClicked() {
-    this.showDetail = !this.showDetail;
-  }
+  // detailRowClicked() {
+  //   this.showDetail = !this.showDetail;
+  // }
 }
