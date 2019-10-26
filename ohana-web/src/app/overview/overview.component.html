@@ -23,58 +23,37 @@
     <mat-cell *matCellDef="let person" [attr.colspan]="personsOverviewHeaders.length">
       <div class="person-detail"
            [@detailExpand]="person == expandedPerson ? 'expanded' : 'collapsed'">
-        test
+        <div>
+          {{person.email}}
+        </div>
       </div>
     </mat-cell>
   </ng-container>
-
 </mat-table>
 
 <table mat-table
        [dataSource]="dataSource" multiTemplateDataRows
        class="mat-elevation-z8">
-
   <tr mat-header-row *matHeaderRowDef="personsOverviewHeaders"></tr>
-
   <tr mat-row *matRowDef="let person; columns: personsOverviewHeaders;"
       class="person-row"
       [class.person-expanded-row]="expandedPerson === person"
       (click)="expandedPerson = expandedPerson === person ? null : person">
   </tr>
-
-
   <tr mat-row *matRowDef="let person; columns: ['expandedDetail']"
       class="person-detail-row"></tr>
-
   <ng-container matColumnDef="{{header}}" *ngFor="let header of personsOverviewHeaders">
     <th mat-header-cell *matHeaderCellDef> {{header}} </th>
     <td mat-cell *matCellDef="let element"> {{element[header]}} </td>
   </ng-container>
-
   <ng-container matColumnDef="expandedDetail">
     <td mat-cell *matCellDef="let person" [attr.colspan]="personsOverviewHeaders.length">
       <div class="person-detail"
            [@detailExpand]="person == expandedPerson ? 'expanded' : 'collapsed'">
-        <table>
-          <tr>
-            <td></td>
-            <td>{{person.postalCode + ' ' + person.city}}</td>
-            <td>({{person.birthPlace}})</td>
-          </tr>
-          <tr>
-            <td>{{person.email}}</td>
-            <td>{{person.mobilePhoneNumber}}</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>{{person.phoneNumber}}</td>
-          </tr>
-          <tr>
-            <td>{{person.id}}</td>
-          </tr>
-        </table>
+        <div>
+          {{person.email}}
+        </div>
       </div>
     </td>
   </ng-container>
-
 </table>

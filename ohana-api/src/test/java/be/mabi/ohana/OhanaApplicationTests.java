@@ -12,5 +12,4 @@ public class OhanaApplicationTests {
     @Test
     public void contextLoads() {
     }
-
 }
