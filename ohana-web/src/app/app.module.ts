@@ -8,9 +8,6 @@ import {OverviewComponent} from './overview/overview.component';
 import {MatButtonModule, MatFormFieldModule, MatInputModule, MatTableModule} from "@angular/material";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {OverviewSearchComponent} from './overview/overview-search/overview-search.component';
-import { OverviewResultComponent } from './overview/overview-result/overview-result.component';
-import { OverviewResultRowComponent } from './overview/overview-result-row/overview-result-row.component';
-import { OverviewResultRowDetailComponent } from './overview/overview-result-row-detail/overview-result-row-detail.component';
 
 @NgModule({
   declarations: [
@@ -18,10 +15,7 @@ import { OverviewResultRowDetailComponent } from './overview/overview-result-row
     DashboardComponent,
     HeaderComponent,
     OverviewComponent,
-    OverviewSearchComponent,
-    OverviewResultComponent,
-    OverviewResultRowComponent,
-    OverviewResultRowDetailComponent
+    OverviewSearchComponent
   ],
   imports: [
     BrowserModule,
